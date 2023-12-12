@@ -4,9 +4,11 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="text-zinc-50 bg-zinc-700 w-full min-h-screen">
+    <div className="text-zinc-50 bg-zinc-700 w-full min-h-screen ">
       <Header />
-      <Outlet />
+      <div className="max-w-screen-xl mx-auto">
+        <Outlet />
+      </div>
     </div>
   );
 };

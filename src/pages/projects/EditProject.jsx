@@ -8,8 +8,8 @@ import { LuPencilLine } from "react-icons/lu";
 const EditProject = ({ project }) => {
   const [isEditMode, setEditMode] = useState(false);
 
-  const [name, setName] = useState(project.name);
-  const [details, setDetails] = useState(project.details);
+  const [name, setName] = useState(project?.name);
+  const [details, setDetails] = useState(project?.details);
   const [status, setStatus] = useState("");
 
   const [updateProject] = useMutation(UPDATE_PROJECT, {
@@ -23,7 +23,7 @@ const EditProject = ({ project }) => {
       return toast.error("required all fill");
     }
     updateProject(name, details, status);
-    toast.success(`Successfull update ${project.name}`);
+    toast.success(`Successfull update ${project?.name}`);
   };
   return (
     <>

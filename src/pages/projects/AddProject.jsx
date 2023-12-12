@@ -88,9 +88,9 @@ const AddProject = () => {
               id=""
               className="bg-zinc-500 border border-orange-400 focus:outline-none p-2 w-full"
             >
-              {data.clients.map((client) => (
-                <option value={client.id} key={client.id}>
-                  {client.name}
+              {data?.clients.map((client) => (
+                <option value={client?.id} key={client?.id}>
+                  {client?.name}
                 </option>
               ))}
             </select>
